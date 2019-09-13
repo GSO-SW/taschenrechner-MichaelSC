@@ -17,7 +17,8 @@ namespace taschenrechner
             string zeichen="";
 
             Console.WriteLine("Bitte wählen sie ein rechen zeichen aus.");
-            Console.WriteLine("1.+");
+            Console.WriteLine("1. +");
+            Console.WriteLine("2. -\n");
             auswahl = Convert.ToInt32(Console.ReadLine());
             
 
@@ -27,11 +28,17 @@ namespace taschenrechner
             zahl2 = Convert.ToInt32(Console.ReadLine());
             Console.Clear();
 
+            
+
             switch (auswahl)
             {
                 case 1:
                     ergebnis = zahl1 + zahl2;
                     zeichen = "+";
+                    break;
+                case 2:
+                    ergebnis = zahl1 - zahl2;
+                    zeichen = "-";
                     break;
                 default:
                     break;
